@@ -1,0 +1,174 @@
+:root {
+  color: #1d2528;
+  background: #f3efe6;
+  font-family: Avenir, "Trebuchet MS", Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 6px;
+  padding: 0.65rem 0.9rem;
+  color: #ffffff;
+  background: #225c4d;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 2rem;
+  background:
+    linear-gradient(135deg, rgba(250, 198, 94, 0.32), transparent 32rem),
+    linear-gradient(315deg, rgba(41, 117, 103, 0.22), transparent 28rem),
+    #f3efe6;
+}
+
+.hero {
+  max-width: 960px;
+  margin: 0 auto 2rem;
+}
+
+.hero p {
+  margin: 0 0 0.5rem;
+  color: #8a4b24;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 760px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.panel {
+  border: 1px solid rgba(29, 37, 40, 0.14);
+  border-radius: 8px;
+  padding: 1rem;
+  background: rgba(255, 252, 245, 0.82);
+  box-shadow: 0 18px 40px rgba(29, 37, 40, 0.08);
+}
+
+.panel h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.panel p {
+  color: #4f5b5e;
+}
+
+.lesson-list {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 1rem 0 0;
+  list-style: none;
+}
+
+.lesson {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid rgba(29, 37, 40, 0.12);
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: #ffffff;
+}
+
+.lesson p {
+  margin: 0.2rem 0 0;
+}
+
+.lesson-complete {
+  background: #eef8ef;
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.badge-beginner {
+  color: #174234;
+  background: #cce9dc;
+}
+
+.badge-intermediate {
+  color: #5a3300;
+  background: #f5d28a;
+}
+
+.badge-advanced {
+  color: #712d2d;
+  background: #f0b2a8;
+}
+
+.lesson-form {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.lesson-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 700;
+}
+
+.lesson-form input,
+.lesson-form select {
+  width: 100%;
+  border: 1px solid rgba(29, 37, 40, 0.22);
+  border-radius: 6px;
+  padding: 0.65rem;
+  background: #ffffff;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    padding: 1rem;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
